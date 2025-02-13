@@ -30,9 +30,15 @@
 					<a class="dropdown-tooggle" data-toggle="dropdown" href="#">Revisiones<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="?controller=consulta&action=show">Ver consultas</a></li>
+						<li><a href="?controller=deteccion&action=detectar">Detectar</a></li>
 					</ul>
 				</li>
-			
+				<li class="dropdown">
+					<a class="dropdown-tooggle" data-toggle="dropdown" href="#">Deteccion<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="?controller=deteccion&action=detectar">Detectar</a></li>
+					</ul>
+				</li>
 		<?php } ?>
 			</ul>		
 			<ul class="nav navbar-nav navbar-right">

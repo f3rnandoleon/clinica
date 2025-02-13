@@ -35,6 +35,10 @@
 				require_once('Models/Receta.php');
 				$controller= new ConsultaController();
 				break;
+			case 'deteccion':  // Nuevo controlador
+				 // Carga el modelo si es necesario
+				$controller = new DeteccionController();
+				break;
 		}
 		//llama a la acción del controlador
 		$controller->{$action }();
@@ -46,7 +50,8 @@
 						'usuario'=>['show','register','save','showregister', 'update', 'delete', 'showLogin','login','logout','error', 'welcome','validarCedula'],
 						'paciente'=>['register','save', 'show', 'showupdate','update', 'delete','buscar'],
 						'historia'=>['register','save', 'show', 'showupdate','update', 'delete','reporteHistorico','buscar'],
-						'consulta'=>['register','save','show', 'showupdate','update','recetaPdf','buscar']
+						'consulta'=>['register','save','show', 'showupdate','update','recetaPdf','buscar'],
+						'deteccion'=>['detectar']
 						);
 	//verifica que el controlador enviado desde index.php esté dentro del arreglo controllers
 	if (array_key_exists($controller, $controllers)) {
